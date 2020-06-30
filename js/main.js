@@ -17,7 +17,9 @@ console.log(randomNumber)
 
 // Mostrar mensaje con pista
 function showHint() {
-    if (inputNumberEl.value > randomNumber) {
+    if (inputNumberEl.value > 100 || inputNumberEl.value < 0) {
+        hint.innerHTML = 'El número debe estar entre 1 y 100';
+    } else if (inputNumberEl.value > randomNumber) {
         hint.innerHTML = 'Demasiado alto';
         attemps += 1;
     } else if (inputNumberEl.value < randomNumber) {
@@ -25,6 +27,7 @@ function showHint() {
         attemps += 1;
     } else {
         hint.innerHTML = 'Has ganado campeona!!!'
+        attemps += 1;
     }
 }
 

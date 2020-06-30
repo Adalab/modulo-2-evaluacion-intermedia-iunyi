@@ -17,10 +17,10 @@
 
 .button {
     color:white;
-    background-color: rgb(33, 198, 173);
+    background-color:rgb(20, 217, 196);
     border: none;
     border-radius: 5px;
-    padding: 6px;
+    padding: 6px 15px;
     margin-bottom: 10px;
 }
 
