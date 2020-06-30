@@ -1,3 +1,29 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
+    color: rgb(99, 99, 99);
+}
+
+.entered_number_label, .entered_number_input {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.button {
+    color:white;
+    background-color: rgb(33, 198, 173);
+    border: none;
+    border-radius: 3px;
+    padding: 6px;
+    margin-bottom: 10px;
+}
+
+.hint, .attemps {
+    padding-left: 5px;
+    margin-bottom: 5px;
+    border: 2px solid rgb(99, 99, 99, 0.3);
+}
+
+.hint p, .attemps p {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
