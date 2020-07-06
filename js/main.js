@@ -15,19 +15,24 @@ let randomNumber = getRandomNumber(100);
 
 console.log(randomNumber)
 
+// Añadir número de intentos
+function addAttemps(){
+    attemps += 1
+}
+
 // Mostrar mensaje con pista
 function showHint() {
-    if (inputNumberEl.value > 100 || inputNumberEl.value < 0) {
+    if (inputNumberEl.value > 100 || inputNumberEl.value < 1) {
         hint.innerHTML = 'El número debe estar entre 1 y 100';
     } else if (inputNumberEl.value > randomNumber) {
         hint.innerHTML = 'Demasiado alto';
-        attemps += 1;
+        addAttemps();
     } else if (inputNumberEl.value < randomNumber) {
         hint.innerHTML = 'Demasiado bajo';
-        attemps += 1;
+        addAttemps();
     } else {
         hint.innerHTML = 'Has ganado campeona!!!'
-        attemps += 1;
+        addAttemps();
     }
 }
 
