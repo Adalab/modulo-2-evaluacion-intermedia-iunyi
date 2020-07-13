@@ -23,17 +23,22 @@ function addAttemps(){
 // Mostrar mensaje con pista
 function showHint() {
     if (inputNumberEl.value > 100 || inputNumberEl.value < 1) {
-        hint.innerHTML = 'El número debe estar entre 1 y 100';
+        renderHint('El número debe estar entre 1 y 100');
     } else if (inputNumberEl.value > randomNumber) {
-        hint.innerHTML = 'Demasiado alto';
+        renderHint('Demasiado alto');
         addAttemps();
     } else if (inputNumberEl.value < randomNumber) {
-        hint.innerHTML = 'Demasiado bajo';
+        renderHint('Demasiado bajo');
         addAttemps();
     } else {
-        hint.innerHTML = 'Has ganado campeona!!!'
+        renderHint('Has ganado campeona!!!');
         addAttemps();
     }
+}
+
+// función pintar en hint
+function renderHint(message) {
+    hint.innerHTML = message
 }
 
 // Mostrar mensaje con número de intentos
